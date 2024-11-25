@@ -1,0 +1,247 @@
+<!DOCTYPE.html>
+<html>
+  <head> 
+    <title>Apple</title>
+    <style>
+       body{font-family: Arial, Halvetica, sans-serif;
+       background-color: #fbfbfb;
+       width:850px;
+       margin-right:auto;
+       margin-left:auto;}
+       h1 {main heading: H1, Gloudy Old style, color:#111212;}
+       p{color:#111212}
+	   <style>
+       a:link{color:#6c2e90;}
+       a:visited{color:#a659eb;}
+       a:hover{color:#868390;}
+       </style>
+	   
+	</style>
+	<style>
+	   
+        .scroll-container {
+            position: relative;
+            width: 300px; 
+            margin: auto;
+            overflow: hidden;  
+        }
+
+        
+        .image-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        
+        .image-wrapper img {
+            width: 300px;  
+            height: auto;
+            flex-shrink: 0; 
+        }
+
+        
+        .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 24px;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+	   
+	   * {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; 
+}
+
+.left {
+  width: 65%
+}
+
+.right {
+  width: 35%
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
+    <style>
+
+table, th, td, {border: 1px solid black;
+border-collapse: collapse;
+}
+th, td {padding: 10px;
+}
+	
+    </style>
+	
+	<style>
+        
+        .apple-button {
+            background-color: #d6c3e6; 
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        
+        .apple-button:hover {
+            background-color: #624c63; 
+        }
+    </style>
+
+
+  </head>
+  
+  <body>
+
+<h1 id="C7"><img src="images/Website_Banner_1.jpg" alt="Banner"></h1>
+
+<p>
+<a href="index.htm">Homepage</a> :
+<a href="latest.htm">Latest</a> :
+<a href="accessories.htm">Accessories</a> :
+<a href="services.htm">Services</a> :
+<a href="blogs.htm">Blogs</a> :
+<a href="apple.htm">Apple</a> :
+<a href="samsung.htm">Samsung</a> :
+<a href="ContactUs.htm">Contact Us</a> :
+<a href="soon.htm">Soon</a>
+</p>
+
+<h1>Apple</h1>
+
+<div class="row">
+  <div class="column left">
+   <div class="scroll-container">
+        <div class="image-wrapper">
+            <img src="images/apl1_apple.jpg" width="230" height="280" alt="iPhone 16">
+            <img src="images/apl2_apple.jpg" width="230" height="280" alt="iPhone 16 Pro">
+            <img src="images/apl3_apple.jpg" width="230" height="280" alt="iPhone 16 Pro Max">
+        </div>
+		
+    <button class="scroll-button prev" onclick="moveImages(-1)">&#10094;</button>
+    <button class="scroll-button next" onclick="moveImages(1)">&#10095;</button>
+</div>
+    
+	
+	<script>
+    let currentIndex = 0;  
+    const images = document.querySelectorAll('.image-wrapper img');
+    const imageWrapper = document.querySelector('.image-wrapper');
+
+    
+    function moveImages(direction) {
+        const totalImages = images.length;
+        const imageWidth = images[0].clientWidth; 
+
+        
+        currentIndex = currentIndex + direction;
+
+        
+        if (currentIndex < 0) {
+            currentIndex = totalImages - 1;
+        } else if (currentIndex >= totalImages) {
+            currentIndex = 0;
+        }
+
+        
+        const offset = -(currentIndex * imageWidth);  
+        imageWrapper.style.transform = `translateX(${offset}px)`;
+    }
+</script>
+  </div>
+  <div class="column right">
+   <img src="images/Surprise!_iPhone!_(GIF).gif" width="330" height="280" alt="iPhone animated gift">
+  </div>
+</div>
+
+<p>:</p>
+<p>:</p>
+
+<h2>Latest Apple Mobile devices</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Screen size</th>
+      <th>Camera quality</th>
+      <th>Battery life</th>
+	  <th>Storage options</th>
+	  <th>Price</th>
+    </tr>
+  </thead>
+<tbody>
+    <tr>
+      <td>iPhone 16 Pro Max</td>
+      <td>2868 x 1320 pixels</td>
+      <td>48MP main sensor</td>
+      <td>4,685 mAh</td>
+	  <td>256GB</td>
+	  <td>£1,199</td>
+    </tr>
+    <tr>
+      <td>iPhone 16 Pro</td>
+      <td>2532 x 1170 pixels</td>
+      <td>48MP main sensor</td>
+      <td>4,685 mAh</td>
+	  <td>256GB</td>
+	  <td>£999.00</td>
+    </tr>
+    <tr>
+      <td>iPhone 16 Plus</td>
+      <td>2796 x 1290 pixels</td>
+      <td>48MP main sensor</td>
+      <td>4,674 mAh</td>
+	  <td>128GB</td>
+	  <td>£899.00</td>
+    </tr>
+    <tr>
+      <td>iPhone 16</td>
+      <td>2532 x 1170 pixels</td>
+      <td>48MP main sensor</td>
+      <td>4,674 mAh</td>
+	  <td>128GB</td>
+	  <td>£799.00</td>
+    </tr>
+<tfoot>
+</table>
+<p>:<p>
+<a href="https://www.apple.com" class="apple-button" target="_blank">Visit Apple Official Website</a>
+<a href="https://discussions.apple.com/welcome" class="apple-button" target="_blank" >Visit Apple Community forum</a>
+<p>:</p>
+<a href="#C7">Back to the top</a> :::::
+<a href="index.htm">Back to the Homepage</a>
+
+</body>
+
+</html>

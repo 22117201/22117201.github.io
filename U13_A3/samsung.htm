@@ -1,0 +1,245 @@
+<!DOCTYPE.html>
+<html>
+  <head> 
+    <title>Samsung</title>
+    <style>
+       body{font-family: Arial, Halvetica, sans-serif;
+       background-color: #fbfbfb;
+       width:850px;
+       margin-right:auto;
+       margin-left:auto;}
+       h1 {color:#111212;}
+       p{color:#111212}
+    </style>
+    <style>
+       a:link{color:#6c2e90;}
+       a:visited{color:#a659eb;}
+       a:hover{color:#868390;}
+    </style>
+	
+	<style>
+	   
+        .scroll-container {
+            position: relative;
+            width: 350px; 
+            margin: auto;
+            overflow: hidden;  
+        }
+
+        
+        .image-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        
+        .image-wrapper img {
+            width: 350px;  
+            height: auto;
+            flex-shrink: 0; 
+        }
+
+        
+        .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            font-size: 24px;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+	   
+	   * {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; 
+}
+
+.left {
+  width: 65%
+}
+
+.right {
+  width: 35%
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+    </style>
+    <style>
+
+table, th, td, {border: 1px solid black;
+border-collapse: collapse;
+}
+th, td {padding: 10px;
+}
+	
+    </style>
+	
+	<style>
+        
+        .samsung-button {
+            background-color: #d6c3e6; 
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        
+        .samsung-button:hover {
+            background-color: #624c63; 
+        }
+    </style>
+
+
+  </head>
+  
+  <body>
+  
+<h1 id="C144"><img src="images/Website_Banner_1.jpg" alt="Banner"></h1>
+
+<p>
+<a href="index.htm">Homepage</a> :
+<a href="latest.htm">Latest</a> :
+<a href="accessories.htm">Accessories</a> :
+<a href="services.htm">Services</a> :
+<a href="blogs.htm">Blogs</a> :
+<a href="apple.htm">Apple</a> :
+<a href="samsung.htm">Samsung</a> :
+<a href="ContactUs.htm">Contact Us</a> :
+<a href="soon.htm">Soon</a>
+</p>
+
+<h1>Samsung</h1>
+
+<div class="row">
+  <div class="column left">
+   <div class="scroll-container">
+        <div class="image-wrapper">
+            <img src="images/sam1_samsung.jpg" width="230" height="280" alt="iPhone 16">
+            <img src="images/sam2_samsung.jpg" width="230" height="280" alt="iPhone 16 Pro">
+            <img src="images/sam3_samsung.jpg" width="230" height="280" alt="iPhone 16 Pro Max">
+        </div>
+		
+    <button class="scroll-button prev" onclick="moveImages(-1)">&#10094;</button>
+    <button class="scroll-button next" onclick="moveImages(1)">&#10095;</button>
+</div>
+    
+	
+	<script>
+    let currentIndex = 0;  
+    const images = document.querySelectorAll('.image-wrapper img');
+    const imageWrapper = document.querySelector('.image-wrapper');
+
+    
+    function moveImages(direction) {
+        const totalImages = images.length;
+        const imageWidth = images[0].clientWidth; 
+
+        
+        currentIndex = currentIndex + direction;
+
+        
+        if (currentIndex < 0) {
+            currentIndex = totalImages - 1;
+        } else if (currentIndex >= totalImages) {
+            currentIndex = 0;
+        }
+
+        
+        const offset = -(currentIndex * imageWidth);  
+        imageWrapper.style.transform = `translateX(${offset}px)`;
+    }
+</script>
+  </div>
+  <div class="column right">
+   <img src="images/sams_samsung.gif" width="330" height="280" alt="Samsung animated gift">
+  </div>
+</div>
+
+<p>:</p>
+<p>:</p>
+
+<h2>Latest Samsung Mobile devices</h2>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Screen size</th>
+      <th>Camera quality</th>
+      <th>Battery life</th>
+	  <th>Storage options</th>
+	  <th>Price</th>
+    </tr>
+  </thead>
+<tbody>
+    <tr>
+      <td>Galaxy S24 Ultra</td>
+      <td>3088 x 1440 pixels</td>
+      <td>200MP main sensor</td>
+      <td>5,000 mAh</td>
+	  <td>256GB</td>
+	  <td>£870.00</td>
+    </tr>
+    <tr>
+      <td>Galaxy S24+</td>
+      <td>3200 x 1440 pixels</td>
+      <td>50MP main sensor</td>
+      <td>4,900 mAh</td>
+	  <td>256GB</td>
+	  <td>£999.00</td>
+    </tr>
+    <tr>
+      <td>Galaxy Z Fold6</td>
+      <td>1856 x 2160 pixels</td>
+      <td>50MP main sensor</td>
+      <td>4,400 mAh</td>
+	  <td>256GB</td>
+	  <td>£1,599</td>
+    </tr>
+    <tr>
+      <td>Galaxy A16 LTE</td>
+      <td>2340 x 1080 pixels</td>
+      <td>50MP main sensor</td>
+      <td>5,000 mAh</td>
+	  <td>128GB</td>
+	  <td>£199.00</td>
+    </tr>
+<tfoot>
+</table>
+<p>:<p>
+<a href="https://www.samsung.com/uk/?srsltid=AfmBOorJqnBmqWt050s3URiOmOrJdt-ALxoPjEstmOhvjQBJEtxQCiwz" class="samsung-button" target="_blank">Visit Samsung Official Website</a>
+<a href="https://eu.community.samsung.com/t5/english/ct-p/uk?page=1&tab=setting:samsung.featured_topics" class="samsung-button" target="_blank" >Visit Samsung Community forum</a>
+<p>:</p>
+
+<a href="#C144">Back to the top</a> :::::
+<a href="index.htm">Back to the Homepage</a>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE.html>
+<html>
+  <head> 
+    <title>Accessories</title>
+    <style>
+       body{font-family: Arial, Halvetica, sans-serif;
+       background-color: #fbfbfb;
+       width:850px;
+       margin-right:auto;
+       margin-left:auto;}
+       h1 {main heading: H1, Gloudy Old style, color:#111212;}
+       p{color:#111212}
+    </style>
+    <style>
+       a:link{color:#6c2e90;}
+       a:visited{color:#a659eb;}
+       a:hover{color:#868390;}
+    </style>
+
+<style>
+        .feedback-form {
+            width: 80%; 
+            margin: 0 auto; 
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        
+        input, textarea {
+            width: 100%; 
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+       
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+  </head>
+
+<body>
+
+<h1 id="C8"><img src="images/Website_Banner_1.jpg" alt="Banner"></h1>
+
+<p>
+<a href="index.htm">Homepage</a> :
+<a href="latest.htm">Latest</a> :
+<a href="accessories.htm">Accessories</a> :
+<a href="services.htm">Services</a> :
+<a href="blogs.htm">Blogs</a> :
+<a href="apple.htm">Apple</a> :
+<a href="samsung.htm">Samsung</a> :
+<a href="ContactUs.htm">Contact Us</a> :
+<a href="soon.htm">Soon</a>
+</p>
+
+<h1>Accessories</h1>
+
+<img src="images/headp_acc.jpg" width="230" height="280" alt="Headphones">
+<img src="images/cas_acc.jpg" width="230" height="280" alt="Cases">
+<img src="images/trs_acc.jpg" width="230" height="280" alt="Tripod stands">
+
+<p>1. Sony WH-CH520 Wireless Headphones, Beige £35.60 </p>
+<p>2. JETech Case for iPhone 13 6.1-Inch, Non-Yellowing Shockproof Phone Bumper Cover, Anti-Scratch Clear Back (Clear). £7.99</p>
+<p>3. TONEOF 60" Selfie Stick Tripod,Upgraded 360° Rotating Mobile Phone Tripod Stand, Extendable All-in-1 Aluminum Tripod with Wireless Remote for Selfies/Live/Video Recording/Travel-Black Gold. £26.99</p>
+
+<p>:</p>
+
+<h3>More accessories and additional information about them</h3>
+
+<p><a href="https://www.urbanears.com/gb/en/">Headphones</a></p>
+
+<p><a href="https://uk.mous.co/collections/phone-cases">Cases</a></p>
+
+<p><a href="https://www.amazon.co.uk/mobile-phone-chargers/b?ie=UTF8&node=340327031">Chargers</a></p>
+
+<p><a href="https://www.amazon.co.uk/phone-protection-film/s?k=phone+protection+film">Phone Protection films</a></p>
+
+<p><a href="https://www.amazon.co.uk/tripod/s?k=tripod">Tripod Stands</a></p>
+
+<p><a href="https://www.o2.co.uk/shop/sim-cards/pay-as-you-go">SIM cards</a></p>
+
+
+<div class="feedback-container">
+    <h2>We Value Your Feedback!</h2>
+
+      <form action="mailto:22117201@cambria.ac.uk" method="POST" enctype="text/plain">
+         <textarea id="feedback" name="feedback" rows="8" required placeholder="Write your feedback here"></textarea>
+       
+<button id="soundButton">Submit Feedback</button>
+
+<audio id="clickSound" src="click-sound.mp3" preload="auto"></audio>
+
+<script>
+    const button = document.getElementById('soundButton');
+    const clickSound = document.getElementById('clickSound');
+
+    button.addEventListener('click', function() {
+        clickSound.play(); // Play the sound when the button is clicked
+    });
+</script>
+
+
+   </form>
+</div>
+
+<a href="#C8">Back to the top</a> :::::
+
+<a href="index.htm">Back to the homepage</a>
+
+</body>
+
+</html>
