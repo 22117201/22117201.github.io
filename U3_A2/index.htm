@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <title>Homepage</title>
+    <style>
+       body{font-family: Arial, Halvetica, sans-serif;
+       background-color: #fbfbfb;
+       width:full page;
+       margin-right:auto;
+       margin-left:auto;}
+       h1 {main heading: H1, Gloudy Old style, color:#111212;}
+       p{color:#111212}
+    </style>
+    <style>
+       a:link{color:#852a6b;}
+       a:visited{color:#a659eb;}
+       a:hover{color:#542145;}
+    </style>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fbfbfb;
+    }
+
+    .banner {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+<style>
+
+ /* Flex container for quote image and nav bar */
+    .content {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    /* Quote image section */
+    .quote-section {
+      width: 70%; /* Takes 70% of the width */
+    }
+
+    .quote-section img {
+      width: 80%;
+      height: auto;
+    }
+
+    /* Navigation bar section */
+    .nav-section {
+      width: 25%; /* Takes 25% of the width */
+      display: flex;
+      flex-direction: column;
+      background-color: #945983;
+      padding: 15px;
+      box-sizing: border-box;
+max-height: 300px;
+overflow-y: auto;
+    }
+
+    .nav-section a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #852a6b;
+      text-align: center;
+      border-radius: 5px;
+    }
+
+    .nav-section a:hover {
+      background-color: #542145;
+    }
+  </style>
+
+<style>
+  .text-section {
+    margin-left: 10px; /* You can increase this value for more space */
+    max-width: 80%;
+  }
+</style>
+<style>
+.button-link,
+.button-link:visited {
+  background-color: #246b27;
+  color: white !important;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: #852a6b;
+  color: white !important;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+  <!-- Banner image -->
+  <h1><img class="banner" src="PortfolioAssets/PortBanner.jpg" alt="Banner"></h1>
+
+  <!-- Quote image + Navigation bar -->
+  <div class="content">
+    
+    <!-- Left side: Quote image -->
+    <div class="quote-section">
+      <img src="PortfolioAssets/quote.jpg" alt="Inspirational Quote">
+    </div>
+
+    <!-- Right side: Navigation bar -->
+    <div class="nav-section">
+      <a href="Unit1.htm">Unit 1 - The Online World</a>
+      <a href="Unit8.htm">Unit 8 - Mobile App Development</a>
+      <a href="Unit13.htm">Unit 13 - Website Development</a>
+      <a href="Unit14.htm">Unit 14 - Computer Hardware</a>
+      <a href="EnglishAndMath.htm">English & Math</a>
+    </div>
+
+  </div>
+
+
+<!-- Image of me + Text -->
+<div class="content">
+
+  <!-- Left side: Image of me -->
+  <div class="me-section">
+    <img src="PortfolioAssets/me.jpg" alt="Image of me" height="500" width="370">
+  </div>
+
+  <!-- Right side: Text -->
+  <div class="text-section">
+    <p>
+      Welcome to my digital portfolio. My name is Anna Bilooka, and I am currently studying Information Technology at Coleg Cambria. This portfolio has been created to showcase the work, skills, and achievements I have developed throughout my course. It includes examples from various units such as The Online World, Mobile App Development, Website Development,  Installing Maintaining Computer Hardware and my English and Math achievements. The purpose of this portfolio is to present my progress and abilities to potential employers and tutors, highlighting both my practical and theoretical knowledge in IT.<br>
+I invite you to explore the different sections to learn more about my journey and what God helped me accomplished.
+    </p>
+<p>
+My College Cambria email: 22117201@cambria.ac.uk
+</p>
+
+<!-- Link to Coleg Cambria as a button -->
+<div style="text-align: left; margin-top: 30px;">
+  <a href="https://www.cambria.ac.uk/" target="_blank" class="button-link">
+    Visit Coleg Cambria Website
+  </a>
+</div>
+  </div>
+
+</div>
+
+<h3>Here is my feedback form. I've put it here to provide visitors with possibility to write their feedback or ask something. </h3>
+
+<div class="feedback-container">
+    <h2>Add you feedback</h2>
+
+      <form action="mailto:22117201@cambria.ac.uk" method="POST" enctype="text/plain">
+         <textarea id="feedback" name="feedback" rows="6" cols="200" required placeholder="Write your feedback here"></textarea>
+       
+<button id="soundButton">Submit Feedback</button>
+
+<audio id="clickSound" src="click-sound.mp3" preload="auto"></audio>
+
+
+   </form>
+
+</body>
+</html>
+
+
+
