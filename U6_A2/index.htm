@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Celtec | Independent Game Development - Homepage</title>
+</head>
+<link href="VFstyles.css" rel="stylesheet" type="text/css">
+<body>
+<h1 id="H12">
+<div id="page">
+<div id="banner">
+<img src="images/banner.jpg" alt="Unlesh Your Full Gaming Potential" size="1000">
+</div>
+<div id="navigation">
+
+<a href="AboutUs.htm">About Us</a> -
+<a href="products.htm">Products</a> -
+<a href="blog.htm">Blog</a> -
+<a href="contact.htm">Contact Us</a>
+
+<h5 id="greeting"></h5>
+
+<script>
+var digital = new Date();
+var hours = digital.getHours();
+var message = "";
+
+if (hours >= 5 && hours <= 11) {
+    message = "Good morning visitor. Welcome! Hope you will find something interesting on our gaming website!";
+}
+else if (hours == 12) {
+    message = "It is high noon. Thanks for dropping by!";
+}
+else if (hours >= 13 && hours <= 17) {
+    message = "Good afternoon, and thanks for visiting.";
+}
+else if (hours >= 18 && hours <= 20) {
+    message = "Good evening. Hope you enjoy the sunset.";
+}
+else if (hours >= 21 || hours < 5) {  
+    message = "Wow! You chose to visit our website over sleep!";
+}
+
+document.getElementById("greeting").innerHTML = "<b>" + message + "</b>";
+</script>
+</div>
+
+<div id="maincontent">
+<h2>Celtec Games</h2>
+<p>Celtec is an independent games company that focuses on developing original and engaging games for desktop and mobile platforms. The company aims to combine creativity and technology to deliver enjoyable gaming experiences to its audience.</p>
+
+<img src="images/available.jpg" width="272" height="350" alt="Available Now">
+<img src="images/begin.jpg" width="350" height="350" alt="Begin Your Story Today">
+<img src="images/GamDev.jpg" width="350" height="350" alt="Gaming World Development">
+
+<h3>Let's play</h3>
+<div class="game-container">
+<h5>Guess the Number Game</h5>
+
+<p>Enter a number between 1 and 100:</p>
+
+<input type="number" id="userGuess">
+<button onclick="checkGuess()">Guess</button>
+
+<p id="message"></p>
+<p id="attempts"></p>
+
+<script>
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+let attemptCount = 0;
+
+function checkGuess() {
+    let guess = document.getElementById("userGuess").value;
+    attemptCount++;
+
+    if (guess == randomNumber) {
+        document.getElementById("message").innerText = "Correct! You won!";
+        document.getElementById("attempts").innerText = 
+            "Attempts: " + attemptCount;
+    } 
+    else if (guess > randomNumber) {
+        document.getElementById("message").innerText = "Too high!";
+    } 
+    else {
+        document.getElementById("message").innerText = "Too low!";
+    }
+}
+</script>
+<button onclick="location.reload()">Restart Game</button>
+</div>
+
+
+<div class="social-icons">
+<a href="https://www.instagram.com/celtec.games/" target="_blank">
+    <img src="images/instagram.jpg"  width="30" height="50" alt="Instagram">
+</a>
+
+<a href="https://www.facebook.com/people/Celtec-Games/61585605560631/" target="_blank">
+    <img src="images/facebook.jpg" width="30" height="50" alt="Facebook">
+</a>
+</div>
+
+<p><a href="#H12">Back to the top</a></p>
+
+<footer>
+<p>© Celtec 2026</p>
+</footer>
+
+</div>
+</div>
+
+</body>
+</html>

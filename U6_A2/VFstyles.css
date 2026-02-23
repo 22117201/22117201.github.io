@@ -1,0 +1,188 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    size: 20;
+    background-color: #290c1b;
+    margin: 0;
+    padding: 0;
+}
+
+#banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#page {
+    background-color: #290c1b;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left:auto;
+}
+
+#navigation {
+    text-aligh: right;
+    padding-top: 10px;
+    padding-right: 5px;
+}
+
+#maincontent {
+    padding: 10px;
+    padding: 5px;
+} 
+
+p {
+    color: #FFFFFF;
+    font-size: 20px;
+    line-height: 1.5; 
+}
+
+h1, h2, h3 {
+    color: #FFFFFF;
+}
+
+a:link {
+    color: #746aab;
+}
+a:hover{
+    color: #1024de;
+}
+
+a:link {
+    color: #5c27e3;
+}
+a:hover{ 
+    color: #1024de;
+}
+a:active,
+a:visited {
+    color:#6f75ad;
+}
+.social-icons {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.social-icons img {
+    width: 50px;
+    margin-left: 5px;
+}
+.game-container {
+    text-align: center; 
+    margin-top: 20px;
+}
+ul {
+    color: #FFFFFF;     
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+.right-image {
+    float: right;
+}
+.left-image {
+    float: left;
+    margin-right: 50px;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;           
+  gap: 20px;                      
+}
+
+.product p {
+  flex: 1;
+  font-weight: normal;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+}
+.buy-btn {
+  background-color: purple;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.xbox {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;           
+  gap: 20px;                      
+}
+.xbox p {
+  flex: 1;
+  font-weight: normal;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+}
+.NintendoHardware {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;           
+  gap: 20px;                      
+}
+.NintendoHardware p {
+  flex: 1;
+  font-weight: normal;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+}
+.games-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: #FFFFFF;
+}
+
+.games-table th,
+.games-table td {
+  border: 1px solid #6f75ad;
+  padding: 10px;
+  text-align: center;
+}
+
+.games-table th {
+  background-color: #746aab;
+}
+.video-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.video-box iframe {
+    width: 80%;
+    height: 400px;
+}
+.video-box {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+    width: 700px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #6f75ad;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #857acf;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #6959d4;
+}
