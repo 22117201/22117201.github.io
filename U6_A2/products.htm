@@ -3,6 +3,21 @@
 
 <head>
 <title>Celtec | Independent Game Development - Products</title>
+  <style>
+
+body{
+    text-align:center;
+    background:#111;
+    color:white;
+    font-family:Arial;
+}
+
+canvas{
+    background:#1e1e2f;
+    border:3px solid #00d9ff;
+}
+
+</style>
 </head>
 <link href="VFstyles.css" rel="stylesheet" type="text/css">
 <body>
@@ -53,6 +68,112 @@
   </a>
 </div>
 <img src="Images/NintendoServices.jpg" width="350" height="350" alt="Bright image of Nintendo" class="right-image">
+
+
+  
+
+<body>
+
+<h1>Celtec: Star Catcher</h1>
+<p>Move with ← → keys and catch the stars!</p>
+
+<canvas id="gameCanvas" width="600" height="400"></canvas>
+
+<p>Score: <span id="score">0</span></p>
+
+<script>
+
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+let player = {
+    x: 275,
+    y: 360,
+    width: 50,
+    height: 20,
+    speed: 7
+};
+
+let stars = [];
+let score = 0;
+
+document.addEventListener("keydown", movePlayer);
+
+function movePlayer(e){
+
+    if(e.key === "ArrowLeft"){
+        player.x -= player.speed;
+    }
+
+    if(e.key === "ArrowRight"){
+        player.x += player.speed;
+    }
+
+}
+
+function createStar(){
+
+    stars.push({
+        x: Math.random() * 580,
+        y: 0,
+        size: 10,
+        speed: 3 + Math.random()*2
+    });
+
+}
+
+function updateGame(){
+
+    ctx.clearRect(0,0,600,400);
+
+    // Draw player
+    ctx.fillStyle = "#00d9ff";
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+
+    // Draw stars
+    ctx.fillStyle = "#ffd700";
+
+    for(let i=0;i<stars.length;i++){
+
+        let star = stars[i];
+        star.y += star.speed;
+
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.size, 0, Math.PI*2);
+        ctx.fill();
+
+        // Collision
+        if(
+            star.y > player.y &&
+            star.x > player.x &&
+            star.x < player.x + player.width
+        ){
+
+            stars.splice(i,1);
+            score++;
+            document.getElementById("score").innerText = score;
+        }
+
+        // Remove missed star
+        if(star.y > 400){
+            stars.splice(i,1);
+        }
+
+    }
+
+}
+
+setInterval(createStar, 1000);
+setInterval(updateGame, 20);
+
+</script>
+
+</body>
+
+
+
+
+  
 <h2>Services</h2>
 
 <p>Nintendo’s official UK website highlights its range of games, hardware like the Nintendo Switch systems, and online services such as the Nintendo eShop and Nintendo Switch Online, where players 
@@ -69,4 +190,5 @@ can find new releases, updates, and special features. It showcases the latest ne
 </body>
 
 </html>
+
 
